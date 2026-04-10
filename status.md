@@ -11,6 +11,7 @@
 | **Título tentativo** | Sistema de Generación Automatizada de Materiales Instruccionales mediante Inteligencia Artificial |
 | **Institución** | Universidad Peruana de Ciencias Aplicadas (UPC) |
 | **Tema principal** | Experto Temático — IA aplicada al Diseño Instruccional |
+| **Profesor** | Daniel Burga — daniel.burga@upc.pe |
 | **Repositorio** | https://github.com/GoDeeper96/tesis_upc.git |
 | **Código fuente de referencia** | `D:\Proyectos actuales\UTP_Experto_Tematico\experto_tem_v1` |
 
