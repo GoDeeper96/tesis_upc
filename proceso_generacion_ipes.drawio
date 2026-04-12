@@ -1,0 +1,247 @@
+<mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+  <root>
+    <mxCell id="0" />
+    <mxCell id="1" parent="0" />
+
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <!-- TITLE -->
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <mxCell id="title" value="Proceso de Generación de Contenido IPES mediante Agentes de IA" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontStyle=1;fontColor=#1F3864;" vertex="1" parent="1">
+      <mxGeometry x="200" y="20" width="1200" height="40" as="geometry" />
+    </mxCell>
+
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <!-- SECTION LABELS -->
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <mxCell id="lbl_input" value="ENTRADAS" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=11;fontStyle=1;fontColor=#666666;" vertex="1" parent="1">
+      <mxGeometry x="60" y="80" width="120" height="30" as="geometry" />
+    </mxCell>
+    <mxCell id="lbl_fase1" value="FASE 1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=11;fontStyle=1;fontColor=#0E4D8B;" vertex="1" parent="1">
+      <mxGeometry x="370" y="80" width="160" height="30" as="geometry" />
+    </mxCell>
+    <mxCell id="lbl_fase2" value="FASE 2" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=11;fontStyle=1;fontColor=#0E4D8B;" vertex="1" parent="1">
+      <mxGeometry x="650" y="80" width="160" height="30" as="geometry" />
+    </mxCell>
+    <mxCell id="lbl_fase3" value="FASE 3" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=11;fontStyle=1;fontColor=#0E4D8B;" vertex="1" parent="1">
+      <mxGeometry x="930" y="80" width="160" height="30" as="geometry" />
+    </mxCell>
+    <mxCell id="lbl_output" value="SALIDA" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=11;fontStyle=1;fontColor=#666666;" vertex="1" parent="1">
+      <mxGeometry x="1210" y="80" width="120" height="30" as="geometry" />
+    </mxCell>
+    <mxCell id="lbl_validacion" value="VALIDACIÓN" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=11;fontStyle=1;fontColor=#666666;" vertex="1" parent="1">
+      <mxGeometry x="1380" y="80" width="130" height="30" as="geometry" />
+    </mxCell>
+
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <!-- BACKGROUND LANES -->
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <mxCell id="bg_inputs" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#d6d6d6;opacity=50;" vertex="1" parent="1">
+      <mxGeometry x="40" y="110" width="200" height="580" as="geometry" />
+    </mxCell>
+    <mxCell id="bg_agents" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;opacity=30;" vertex="1" parent="1">
+      <mxGeometry x="270" y="110" width="870" height="580" as="geometry" />
+    </mxCell>
+    <mxCell id="bg_output" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#d6d6d6;opacity=50;" vertex="1" parent="1">
+      <mxGeometry x="1170" y="110" width="180" height="580" as="geometry" />
+    </mxCell>
+    <mxCell id="bg_val" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;opacity=50;" vertex="1" parent="1">
+      <mxGeometry x="1380" y="110" width="200" height="580" as="geometry" />
+    </mxCell>
+
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <!-- INPUT DOCUMENTS -->
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <mxCell id="doc_silabo" value="📄 Sílabo&#xa;(.xlsx / .pdf)" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=0.27;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;fontSize=11;" vertex="1" parent="1">
+      <mxGeometry x="65" y="170" width="150" height="90" as="geometry" />
+    </mxCell>
+    <mxCell id="doc_kickoff" value="📄 Acta de Reunión&#xa;de Inicio&#xa;(.docx / .pdf)" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=0.27;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;fontSize=11;" vertex="1" parent="1">
+      <mxGeometry x="65" y="330" width="150" height="90" as="geometry" />
+    </mxCell>
+    <mxCell id="doc_biblio" value="📄 Bibliografía&#xa;(.xlsx)" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=0.27;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;fontSize=11;" vertex="1" parent="1">
+      <mxGeometry x="65" y="490" width="150" height="90" as="geometry" />
+    </mxCell>
+
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <!-- FASE 1 — DISEÑO DEL CURSO -->
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <mxCell id="fase1_box" value="&lt;b&gt;Diseño del Curso&lt;/b&gt;&#xa;&#xa;Los agentes procesan los&#xa;documentos de entrada y&#xa;construyen la estructura&#xa;del contenido del curso." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;verticalAlign=top;spacingTop=4;" vertex="1" parent="1">
+      <mxGeometry x="290" y="170" width="200" height="140" as="geometry" />
+    </mxCell>
+    <mxCell id="fase1_out" value="Esquema del Curso&#xa;&#xa;• Temas por semana&#xa;• Subtemas&#xa;• Apartados&#xa;• Logros de aprendizaje" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=10;fontStyle=2;" vertex="1" parent="1">
+      <mxGeometry x="290" y="340" width="200" height="110" as="geometry" />
+    </mxCell>
+
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <!-- FASE 2 — ASEGURAMIENTO -->
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <mxCell id="fase2_box" value="&lt;b&gt;Aseguramiento&lt;/b&gt;&#xa;&#xa;Los agentes verifican que&#xa;la estructura sea consistente&#xa;con los logros y cumpla&#xa;las restricciones pedagógicas." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;verticalAlign=top;spacingTop=4;" vertex="1" parent="1">
+      <mxGeometry x="570" y="170" width="200" height="140" as="geometry" />
+    </mxCell>
+    <mxCell id="fase2_rules" value="Restricciones verificadas&#xa;&#xa;• Alineación logros de aprendizaje&#xa;• Presupuesto de tiempo/semana&#xa;• Tipo de recurso según verbo&#xa;• Actividades cal. y no cal." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=10;fontStyle=2;" vertex="1" parent="1">
+      <mxGeometry x="570" y="340" width="200" height="110" as="geometry" />
+    </mxCell>
+    <mxCell id="fase2_decision" value="¿Estructura&#xa;consistente?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="600" y="490" width="140" height="80" as="geometry" />
+    </mxCell>
+    <mxCell id="fase2_retry" value="Ajuste y&#xa;reintento" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="500" y="510" width="80" height="40" as="geometry" />
+    </mxCell>
+
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <!-- FASE 3 — GENERACIÓN DE CONTENIDO -->
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <mxCell id="fase3_box" value="&lt;b&gt;Generación de Contenido&lt;/b&gt;&#xa;&#xa;Los agentes producen el&#xa;material textual de cada&#xa;semana del curso." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;verticalAlign=top;spacingTop=4;" vertex="1" parent="1">
+      <mxGeometry x="850" y="170" width="200" height="140" as="geometry" />
+    </mxCell>
+    <mxCell id="fase3_ipes" value="Contenido IPES generado&#xa;&#xa;• Introducción a la semana&#xa;• Guiones de presentación&#xa;• Consignas de ejercicios&#xa;  (calificados y no cal.)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=10;fontStyle=2;" vertex="1" parent="1">
+      <mxGeometry x="850" y="340" width="200" height="110" as="geometry" />
+    </mxCell>
+
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <!-- OUTPUT — 18 WORD DOCS -->
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <mxCell id="output_docs" value="📝 18 Documentos Word&#xa;&#xa;Un documento por semana&#xa;con el contenido completo&#xa;de la sesión (IPES)." style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=0.27;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;fontSize=11;" vertex="1" parent="1">
+      <mxGeometry x="1185" y="270" width="160" height="110" as="geometry" />
+    </mxCell>
+
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <!-- VALIDACIÓN — DOCENTE REVISOR -->
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <mxCell id="revisor" value="👤 Docente Revisor&#xa;&#xa;Profesional experto que&#xa;evalúa la calidad, coherencia&#xa;pedagógica y alineación&#xa;del contenido generado." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;verticalAlign=top;spacingTop=4;" vertex="1" parent="1">
+      <mxGeometry x="1395" y="200" width="170" height="150" as="geometry" />
+    </mxCell>
+    <mxCell id="decision_val" value="¿Contenido&#xa;aprobado?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="1415" y="390" width="130" height="80" as="geometry" />
+    </mxCell>
+    <mxCell id="aprobado" value="✅ Contenido&#xa;Aprobado" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="1420" y="520" width="120" height="50" as="geometry" />
+    </mxCell>
+    <mxCell id="observaciones" value="🔄 Observaciones&#xa;al equipo" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="1300" y="420" width="90" height="50" as="geometry" />
+    </mxCell>
+
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <!-- ARROWS — Inputs to Fase 1 -->
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <mxCell id="arr_sil_f1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.3;entryDx=0;entryDy=0;" edge="1" source="doc_silabo" target="fase1_box" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="arr_kick_f1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" source="doc_kickoff" target="fase1_box" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="arr_bib_f1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.7;entryDx=0;entryDy=0;" edge="1" source="doc_biblio" target="fase1_box" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- Fase 1 box → Fase 1 output -->
+    <mxCell id="arr_f1box_out" style="edgeStyle=orthogonalEdgeStyle;rounded=0;" edge="1" source="fase1_box" target="fase1_out" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- Fase 1 output → Fase 2 box -->
+    <mxCell id="arr_f1out_f2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;" edge="1" source="fase1_out" target="fase2_box" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- Fase 2 box → Fase 2 output -->
+    <mxCell id="arr_f2box_out" style="edgeStyle=orthogonalEdgeStyle;rounded=0;" edge="1" source="fase2_box" target="fase2_rules" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- Fase 2 output → Decision -->
+    <mxCell id="arr_f2rules_dec" style="edgeStyle=orthogonalEdgeStyle;rounded=0;" edge="1" source="fase2_rules" target="fase2_decision" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- Decision → Retry (No) -->
+    <mxCell id="arr_dec_retry" value="No" style="edgeStyle=orthogonalEdgeStyle;rounded=0;fontStyle=1;fontSize=10;" edge="1" source="fase2_decision" target="fase2_retry" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- Retry → Fase 1 (loop back) -->
+    <mxCell id="arr_retry_f1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;curved=1;" edge="1" source="fase2_retry" target="fase1_box" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="540" y="640" />
+          <mxPoint x="390" y="640" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- Decision → Fase 3 (Sí) -->
+    <mxCell id="arr_dec_f3" value="Sí" style="edgeStyle=orthogonalEdgeStyle;rounded=0;fontStyle=1;fontSize=10;" edge="1" source="fase2_decision" target="fase3_box" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="740" y="530" />
+          <mxPoint x="740" y="150" />
+          <mxPoint x="950" y="150" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- Fase 3 box → Fase 3 IPES -->
+    <mxCell id="arr_f3box_ipes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;" edge="1" source="fase3_box" target="fase3_ipes" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- Fase 3 IPES → Output docs -->
+    <mxCell id="arr_ipes_docs" style="edgeStyle=orthogonalEdgeStyle;rounded=0;" edge="1" source="fase3_ipes" target="output_docs" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- Output → Revisor -->
+    <mxCell id="arr_docs_rev" style="edgeStyle=orthogonalEdgeStyle;rounded=0;" edge="1" source="output_docs" target="revisor" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- Revisor → Decision -->
+    <mxCell id="arr_rev_dec" style="edgeStyle=orthogonalEdgeStyle;rounded=0;" edge="1" source="revisor" target="decision_val" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- Decision val → Aprobado (Sí) -->
+    <mxCell id="arr_decval_ok" value="Sí" style="edgeStyle=orthogonalEdgeStyle;rounded=0;fontStyle=1;fontSize=10;" edge="1" source="decision_val" target="aprobado" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- Decision val → Observaciones (No) -->
+    <mxCell id="arr_decval_no" value="No" style="edgeStyle=orthogonalEdgeStyle;rounded=0;fontStyle=1;fontSize=10;" edge="1" source="decision_val" target="observaciones" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- Observaciones → Fase 3 (loop back) -->
+    <mxCell id="arr_obs_f3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;curved=1;" edge="1" source="observaciones" target="fase3_box" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="1345" y="445" />
+          <mxPoint x="1345" y="660" />
+          <mxPoint x="950" y="660" />
+          <mxPoint x="950" y="310" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <!-- LEGEND -->
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <mxCell id="legend_title" value="Leyenda" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="60" y="730" width="100" height="20" as="geometry" />
+    </mxCell>
+    <mxCell id="leg1" value="Agente IA — Diseño" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="60" y="755" width="150" height="30" as="geometry" />
+    </mxCell>
+    <mxCell id="leg2" value="Agente IA — Aseguramiento" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="230" y="755" width="180" height="30" as="geometry" />
+    </mxCell>
+    <mxCell id="leg3" value="Agente IA — Generación" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="430" y="755" width="160" height="30" as="geometry" />
+    </mxCell>
+    <mxCell id="leg4" value="Validación humana" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="610" y="755" width="140" height="30" as="geometry" />
+    </mxCell>
+    <mxCell id="leg5" value="Error / Reintento" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="770" y="755" width="130" height="30" as="geometry" />
+    </mxCell>
+
+  </root>
+</mxGraphModel>

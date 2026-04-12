@@ -66,33 +66,66 @@ body(
 h2('Antecedentes')
 
 body(
-    'Sánchez et al. (2023) propusieron el uso de modelos de lenguaje de gran escala (LLMs) '
-    'para la generación automática de materiales de aprendizaje en entornos de educación '
-    'superior a distancia. Su investigación demostró que los contenidos generados por IA '
-    'alcanzaron niveles de coherencia pedagógica comparables a los elaborados manualmente '
-    'por expertos, reduciendo el tiempo de producción en un 60%. Este estudio sienta un '
-    'precedente relevante para la aplicación de agentes de IA en la generación de guiones '
-    'instruccionales, que es precisamente el foco del presente proyecto.'
+    'La pandemia de COVID-19 marcó un punto de inflexión en la educación superior del '
+    'Perú. A partir del año 2020, y con mayor impacto durante 2021, las universidades '
+    'se vieron obligadas a migrar masivamente hacia la modalidad virtual, sin contar con '
+    'los procesos ni la infraestructura suficiente para sostener esa transición a escala. '
+    'Según la UNESCO (2021), más del 90% de los sistemas educativos en América Latina '
+    'implementaron alguna forma de educación a distancia durante la pandemia, lo que '
+    'generó una demanda sin precedentes de contenido digital instruccional en plazos '
+    'extremadamente cortos.'
 )
 
 body(
-    'Tlili et al. (2023) realizaron una revisión sistemática sobre el uso de inteligencia '
-    'artificial generativa en la educación, identificando que la generación de contenido '
-    'instruccional es una de las aplicaciones con mayor potencial de impacto en la '
-    'reducción de la carga laboral docente. Los autores señalan que la adopción de estas '
-    'herramientas requiere marcos de evaluación que involucren a profesionales expertos '
-    'para validar la pertinencia pedagógica del contenido generado, lo que justifica el '
-    'enfoque de validación por docentes revisores adoptado en este proyecto.'
+    'En este contexto, los equipos responsables del diseño y producción de cursos '
+    'virtuales enfrentaron una doble presión: por un lado, la imposibilidad de coordinar '
+    'presencialmente las etapas del proceso, y por otro, el incremento acelerado en el '
+    'número de cursos que debían virtualizarse. El proceso de producción, que típicamente '
+    'involucra a múltiples roles trabajando en cadena —diseñadores instruccionales, '
+    'docentes revisores y virtualizadores—, se volvió especialmente vulnerable al '
+    'trabajo remoto: cada entrega dependía de la disponibilidad del rol anterior, las '
+    'reuniones de coordinación se dificultaron, y las versiones del contenido se '
+    'multiplicaban sin control claro, generando reprocesos y retrasos acumulados.'
 )
 
 body(
-    'En el contexto peruano, Díaz y Quispe (2022) analizaron los procesos de producción '
-    'de cursos virtuales en universidades de Lima, identificando que la etapa de redacción '
-    'de materiales instruccionales representa el principal cuello de botella operativo, '
-    'con tiempos de producción que oscilan entre 10 y 15 días por curso. Concluyeron que '
-    'la incorporación de herramientas tecnológicas en esta fase podría reducir costos '
-    'operativos en hasta un 40%, sin afectar la calidad del contenido si se mantienen '
-    'procesos de revisión experta.'
+    'Hernández et al. (2021) documentaron que, en instituciones de educación superior '
+    'latinoamericanas, el principal obstáculo para la producción de contenido virtual '
+    'durante la pandemia no fue tecnológico sino operativo: la coordinación entre los '
+    'roles del equipo de diseño instruccional se deterioró significativamente al pasar '
+    'al trabajo remoto, duplicando en muchos casos los tiempos de producción esperados. '
+    'Este fenómeno fue particularmente agudo en la fase de redacción y revisión de '
+    'materiales, donde la retroalimentación entre el diseñador y el experto temático '
+    'requería múltiples iteraciones que, en entornos presenciales, se resolvían en '
+    'reuniones cortas y directas.'
+)
+
+body(
+    'Paralelamente, la generación del contenido instruccional —es decir, la redacción '
+    'de los guiones de los recursos de video, las introducciones semanales y las '
+    'consignas de actividades— representa históricamente la última etapa del proceso '
+    'de producción, y por tanto la que concentra la mayor presión de entrega. En '
+    'instituciones con alta demanda de cursos virtuales, esta etapa debe completarse '
+    'en aproximadamente una semana por curso, lo que obliga al equipo a trabajar en '
+    'paralelo con múltiples cursos simultáneamente, aumentando el riesgo de errores, '
+    'inconsistencias pedagógicas y variabilidad en la calidad del contenido entre '
+    'cursos de una misma institución.'
+)
+
+body(
+    'Frente a este escenario, la inteligencia artificial —y en particular los modelos '
+    'de lenguaje de gran escala (LLMs)— han emergido como una alternativa viable para '
+    'asistir en la generación de contenido instruccional. Tlili et al. (2023) realizaron '
+    'una revisión sistemática sobre el uso de IA generativa en educación, identificando '
+    'que la generación de materiales instruccionales es una de las aplicaciones con '
+    'mayor potencial de reducción de carga operativa, siempre que se mantengan '
+    'mecanismos de revisión por expertos para garantizar la calidad pedagógica. '
+    'En la misma línea, Kasneci et al. (2023) destacaron que los LLMs pueden generar '
+    'contenido educativo coherente y alineado a objetivos de aprendizaje cuando se '
+    'les proporcionan estructuras pedagógicas claras como punto de partida, lo que '
+    'corresponde exactamente al enfoque adoptado en el presente proyecto: los agentes '
+    'parten del sílabo y el acta de reunión de inicio para garantizar que todo el '
+    'contenido generado esté anclado al diseño instruccional del curso.'
 )
 
 # ── 1.2 Descripción de la organización ───────────────────────────────────────
@@ -134,10 +167,11 @@ body(
 h2('Análisis del problema')
 
 body(
-    'Las universidades peruanas que ofrecen educación virtual enfrentan un cuello de '
-    'botella operativo en la producción de contenido por curso: la redacción de los '
-    'materiales instruccionales de cada semana académica recae sobre el docente '
-    'virtualizador, un profesional especializado que escribe manualmente las '
+    'La demora en la gestión de contenido y materiales de los cursos virtuales en la '
+    'institución constituye el problema central identificado. La producción de material '
+    'educativo para los cursos virtuales enfrenta un cuello de botella operativo: la '
+    'redacción de los materiales instruccionales de cada semana académica recae sobre '
+    'el docente virtualizador, un profesional especializado que escribe manualmente las '
     'introducciones, guiones de narración para videos de presentación y consignas de '
     'actividades, asegurando que cada pieza esté alineada a los logros de aprendizaje '
     'del curso. Esta situación se origina en las siguientes causas:'
@@ -190,9 +224,9 @@ add_header_row(tbl, ['Problema', 'Causas'])
 
 r = tbl.rows[1]
 r.cells[0].text = (
-    'La generación manual de contenido textual IPES por parte del docente virtualizador '
-    'genera tiempos de producción elevados (~2 semanas por curso) y costos operativos '
-    'crecientes en las universidades peruanas con oferta académica virtual.'
+    'Demora en la producción de material educativo para los cursos virtuales, '
+    'derivada de la dependencia del proceso en el docente virtualizador y la ausencia '
+    'de herramientas tecnológicas que optimicen la generación de contenido instruccional.'
 )
 r.cells[1].text = (
     '• Dependencia exclusiva del docente virtualizador para producir el contenido semanal.\n'
@@ -217,9 +251,9 @@ body(
 h3('Objetivo general')
 
 body(
-    'Implementar una solución tecnológica basada en inteligencia artificial para '
-    'optimizar el tiempo en la generación de contenido de cursos virtuales ante la '
-    'alta carga laboral en universidades del Perú.'
+    'Implementar la solución tecnológica basada en inteligencia artificial para '
+    'optimizar el tiempo, la generación de contenido y los cursos virtuales en '
+    'la universidad.'
 )
 
 h3('Objetivos específicos')
@@ -323,6 +357,6 @@ body(
     'por los agentes de IA.'
 )
 
-out = 'D:/Proyectos actuales/proyecto_tesis_upc/Capitulo1_Tesis.docx'
+out = 'D:/Proyectos actuales/proyecto_tesis_upc/Capitulo1_Tesis_v2.docx'
 doc.save(out)
 print(f'Saved: {out}')
