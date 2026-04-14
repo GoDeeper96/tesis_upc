@@ -647,6 +647,164 @@ doc.add_paragraph()
 page_break()
 
 # ═══════════════════════════════════════════════════════════════════════════════
+# COSTOS DEL PROYECTO
+# ═══════════════════════════════════════════════════════════════════════════════
+h1('Costos del proyecto')
+
+body(
+    'La solución tecnológica utiliza modelos de lenguaje de gran escala (LLMs) a '
+    'través de APIs de pago por uso. A continuación se detallan los precios de los '
+    'modelos utilizados, el costo por componente del proceso y el costo total '
+    'estimado por curso generado, con base en datos reales de ejecución del sistema.'
+)
+
+body('Precios de los modelos LLM utilizados', bold=True)
+llm_tbl = doc.add_table(rows=3, cols=3)
+llm_tbl.style = 'Table Grid'
+header_row(llm_tbl, ['Modelo', 'Precio entrada (por 1M tokens)', 'Precio salida (por 1M tokens)'])
+llm_data = [
+    ('Gemini 2.5-flash-lite (Google)', '$0.075 USD', '$0.30 USD'),
+    ('GPT-4.1-mini (OpenAI)', '$0.40 USD', '$1.60 USD'),
+]
+for i, row_data in enumerate(llm_data):
+    row = llm_tbl.rows[i+1]
+    for j, val in enumerate(row_data):
+        row.cells[j].text = val
+
+doc.add_paragraph()
+
+body('Costo por componente del proceso (por curso — 18 semanas)', bold=True)
+comp_tbl = doc.add_table(rows=12, cols=3)
+comp_tbl.style = 'Table Grid'
+header_row(comp_tbl, ['Componente / Agente', 'Fase', 'Costo estimado (USD)'])
+comp_data = [
+    ('KickOffAgent — parseo del acta de inicio', 'Diseño', '$0.0004'),
+    ('CourseSchemaAgent — contexto del curso', 'Diseño', '$0.0001'),
+    ('UniteSchemaSubAgent — esquema por unidad', 'Diseño', '$0.0037'),
+    ('SyllabusActivityClassifier — clasificación', 'Diseño', '$0.0017'),
+    ('UniteSchemaSubAgent — actividades', 'Diseño', '$0.0019'),
+    ('IpesAgent — one_step_schema_recursos (18 sem.)', 'Generación', '$0.0045'),
+    ('IpesAgent — one_step_introduccion (18 sem.)', 'Generación', '$0.0043'),
+    ('IpesAgent — one_step_presentaciones (18 sem.)', 'Generación', '$0.0053'),
+    ('IpesAgent — one_step_ejercicios (18 sem.)', 'Generación', '$0.0027'),
+    ('CheckIpesAgent — QA del contenido', 'Aseguramiento', '$0.0002'),
+    ('TOTAL IPES (sin material base)', '', '~$0.025 USD'),
+]
+for i, row_data in enumerate(comp_data):
+    row = comp_tbl.rows[i+1]
+    for j, val in enumerate(row_data):
+        row.cells[j].text = val
+        if row_data[0].startswith('TOTAL'):
+            row.cells[j].paragraphs[0].runs[0].bold = True if row.cells[j].paragraphs[0].runs else False
+
+doc.add_paragraph()
+
+body('Comparativa de costo: proceso manual vs. solución IA', bold=True)
+cmp_tbl = doc.add_table(rows=3, cols=3)
+cmp_tbl.style = 'Table Grid'
+header_row(cmp_tbl, ['Proceso', 'Tiempo / Costo estimado', 'Observaciones'])
+cmp_data = [
+    ('Manual (docente virtualizador)',
+     '~2 a 3 semanas × tarifa por hora',
+     'Costo variable según volumen; no escalable sin incremento proporcional de horas.'),
+    ('Solución IA (Gemini 2.5-flash-lite)',
+     '~$0.025 USD por curso (IPES)\n~$0.064 USD por curso (flujo completo)',
+     'Costo fijo por ejecución, independiente del número de cursos procesados en paralelo.'),
+]
+for i, row_data in enumerate(cmp_data):
+    row = cmp_tbl.rows[i+1]
+    for j, val in enumerate(row_data):
+        row.cells[j].text = val
+
+body(
+    'Nota: Los costos presentados se basan en datos reales obtenidos del registro de '
+    'tokens del sistema (token_usage.jsonl), correspondientes a 566 llamadas de '
+    'ejecución. El costo de $0.025 USD corresponde únicamente a la generación de '
+    'materiales IPES (Introducción, Presentaciones y Ejercicios). El costo de $0.064 '
+    'USD incluye adicionalmente la generación del material base de referencia '
+    '(genera_material_base), que es opcional en el flujo de producción.'
+)
+
+doc.add_paragraph()
+page_break()
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# CRONOGRAMA
+# ═══════════════════════════════════════════════════════════════════════════════
+h1('Cronograma del proyecto')
+
+body(
+    'El proyecto se ejecutará entre mayo y septiembre de 2026, organizado en cuatro '
+    'fases alineadas a los objetivos específicos del trabajo de suficiencia profesional. '
+    'Cada fase se desarrolla en sprints de dos semanas siguiendo la metodología Scrum.'
+)
+
+cron_tbl = doc.add_table(rows=17, cols=5)
+cron_tbl.style = 'Table Grid'
+header_row(cron_tbl, ['Sprint', 'Período', 'Fase / OE', 'Actividades principales', 'Entregable'])
+cron_data = [
+    # OE1 — Análisis
+    ('Sprint 1', 'May 05 – May 18',  'OE1 — Análisis',
+     'Revisión bibliográfica de LLMs en educación.\nAnálisis de tecnologías: GPT-4.1-mini, Gemini 2.5-flash-lite, LangGraph.',
+     'Informe de análisis de tecnologías (borrador)'),
+    ('Sprint 2', 'May 19 – Jun 01',  'OE1 — Análisis',
+     'Análisis del proceso actual de virtualización.\nDocumentación del problema y antecedentes.',
+     'Informe de análisis aprobado (IE1)'),
+    # OE2 — Diseño
+    ('Sprint 3', 'Jun 02 – Jun 15',  'OE2 — Diseño',
+     'Diseño de la arquitectura multi-agente.\nDefinición de fases: Diseño, Aseguramiento, Generación.',
+     'Diagrama de arquitectura (borrador)'),
+    ('Sprint 4', 'Jun 16 – Jun 29',  'OE2 — Diseño',
+     'Diseño detallado de agentes: KickOffAgent, CourseSchemaAgent, IpesAgent, CheckIpesAgent.\nDiagramas de flujo del proceso.',
+     'Arquitectura aprobada (IE2)'),
+    # OE3 — Implementación y Validación
+    ('Sprint 5', 'Jun 30 – Jul 13',  'OE3 — Implementación',
+     'Implementación de KickOffAgent y SyllabusActivityClassifier.\nPruebas unitarias de parseo de documentos de entrada.',
+     'Agentes de diseño funcionales'),
+    ('Sprint 6', 'Jul 14 – Jul 27',  'OE3 — Implementación',
+     'Implementación de CourseSchemaAgent y UniteSchemaSubAgent.\nPruebas con sílabos reales.',
+     'Fase Diseño implementada'),
+    ('Sprint 7', 'Jul 28 – Aug 10',  'OE3 — Implementación',
+     'Implementación de IpesAgent (Introducción, Presentaciones, Ejercicios).\nImplementación de CheckIpesAgent y TimeRevisor.',
+     'Fase Generación implementada'),
+    ('Sprint 8', 'Aug 11 – Aug 24',  'OE3 — Validación',
+     'Ejecución del sistema con cursos de prueba.\nEvaluación del contenido por docentes revisores mediante rúbrica de calidad.',
+     'Resultados de validación (borrador)'),
+    ('Sprint 9', 'Aug 25 – Sep 07',  'OE3 — Validación',
+     'Análisis comparativo: tiempo y costo IA vs. proceso manual.\nAjustes finales a los agentes según retroalimentación de revisores.',
+     'Validación aprobada (IE3)'),
+    # OE4 — Plan de continuidad
+    ('Sprint 10', 'Sep 08 – Sep 21', 'OE4 — Continuidad',
+     'Elaboración del plan de continuidad: roles de soporte, niveles de servicio, gestión de riesgos.',
+     'Plan de continuidad (borrador)'),
+    ('Sprint 11', 'Sep 22 – Sep 30', 'OE4 — Continuidad',
+     'Revisión final del plan de continuidad.\nCierre de documentación del trabajo de suficiencia.',
+     'Plan de continuidad aprobado (IE4)'),
+    # Hito final
+    ('Cierre', 'Octubre 2026',       'Entrega final',
+     'Consolidación del informe final.\nPresentación ante el asesor académico.',
+     'Trabajo de Suficiencia Profesional entregado'),
+]
+for i, (sprint, periodo, fase, actividades, entregable) in enumerate(cron_data):
+    row = cron_tbl.rows[i+1]
+    row.cells[0].text = sprint
+    row.cells[1].text = periodo
+    row.cells[2].text = fase
+    row.cells[3].text = actividades
+    row.cells[4].text = entregable
+
+doc.add_paragraph()
+
+body(
+    'Nota: Las fechas son estimadas y podrán ajustarse según el calendario académico '
+    'del Programa de Titulación UPC 2026. Los sprints de validación (OE3) están '
+    'sujetos a la disponibilidad de los docentes revisores.'
+)
+
+doc.add_paragraph()
+page_break()
+
+# ═══════════════════════════════════════════════════════════════════════════════
 # BIBLIOGRAFÍA
 # ═══════════════════════════════════════════════════════════════════════════════
 h1('Bibliografía')

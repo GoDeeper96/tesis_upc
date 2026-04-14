@@ -3,7 +3,9 @@
     "allow": [
       "Bash(pip install:*)",
       "Bash(python -c ':*)",
-      "Bash(grep -E \"\\\\.\\(json|md|txt|docx|xlsx\\)$\")"
+      "Bash(grep -E \"\\\\.\\(json|md|txt|docx|xlsx\\)$\")",
+      "Bash(python -c \" import sys, json lines = [json.loads\\(l\\) for l in sys.stdin if l.strip\\(\\)] by_step = {} total_cost = 0 total_in = 0 total_out = 0 for e in lines: step = e['step'] if step not in by_step: by_step[step] = {'input':0,'output':0,'cost':0,'calls':0} by_step[step]['input'] += e['input_tokens'] by_step[step]['output'] += e['output_tokens'] by_step[step]['cost'] += e['cost_usd'] by_step[step]['calls'] += 1 total_cost += e['cost_usd'] total_in += e['input_tokens'] total_out += e['output_tokens'] print\\(f'Total calls: {len\\(lines\\)}'\\) print\\(f'Total input tokens: {total_in:,}'\\) print\\(f'Total output tokens: {total_out:,}'\\) print\\(f'Total cost USD: \\\\${total_cost:.6f}'\\) print\\(\\) print\\('By step:'\\) for step, d in sorted\\(by_step.items\\(\\), key=lambda x: -x[1][\\\\\"cost\\\\\"]\\): print\\(f' {step}: input={d[\\\\\"input\\\\\"]:,} out={d[\\\\\"output\\\\\"]:,} cost=\\\\${d[\\\\\"cost\\\\\"]:.6f} calls={d[\\\\\"calls\\\\\"]}'\\) \")",
+      "Bash(python gen_project_charter.py)"
     ]
   }
 }
