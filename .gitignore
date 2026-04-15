@@ -1,0 +1,14 @@
+# Word temp/lock files
+~$*
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Temp scripts
+_tmp_*.py
+
+# Editor / OS
+.DS_Store
+Thumbs.db

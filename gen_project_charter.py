@@ -674,30 +674,28 @@ for i, row_data in enumerate(llm_data):
 doc.add_paragraph()
 
 body('Costo por componente del proceso (por curso — 18 semanas)', bold=True)
-comp_tbl = doc.add_table(rows=12, cols=5)
+comp_tbl = doc.add_table(rows=12, cols=3)
 comp_tbl.style = 'Table Grid'
-header_row(comp_tbl, ['Componente / Agente', 'Fase', 'Tokens entrada', 'Tokens salida', 'Costo (USD)'])
+header_row(comp_tbl, ['Componente / Agente', 'Fase', 'Costo estimado (USD)'])
 comp_data = [
-    ('KickOffAgent — parseo del acta de inicio',        'Diseño',        '1,410',   '1,169',  '$0.000456'),
-    ('CourseSchemaAgent — contexto del curso',           'Diseño',           '48',      '18',  '$0.000009'),
-    ('UniteSchemaSubAgent — esquema por unidad',         'Diseño',          '452',   '1,425',  '$0.000461'),
-    ('UniteSchemaSubAgent — actividades',                'Diseño',          '918',     '555',  '$0.000235'),
-    ('SyllabusActivityClassifier — clasificación',       'Diseño',        '6,708',   '4,060',  '$0.001721'),
-    ('IpesAgent — schema_recursos (18 sem.)',            'Generación',   '47,543',  '34,702',  '$0.013976'),
-    ('IpesAgent — introducción (18 sem.)',               'Generación',   '22,292',   '9,332',  '$0.004472'),
-    ('IpesAgent — presentaciones (18 sem.)',             'Generación',   '25,865',  '11,773',  '$0.005472'),
-    ('IpesAgent — ejercicios (18 sem.)',                 'Generación',   '18,254',   '4,498',  '$0.002718'),
-    ('CheckIpesAgent — QA del contenido',                'Aseguramiento',   '885',     '266',  '$0.000146'),
-    ('TOTAL IPES (sin material base)',                   '',            '124,375',  '67,798',  '~$0.030'),
+    ('KickOffAgent — parseo del acta de inicio', 'Diseño', '$0.0004'),
+    ('CourseSchemaAgent — contexto del curso', 'Diseño', '$0.0001'),
+    ('UniteSchemaSubAgent — esquema por unidad', 'Diseño', '$0.0037'),
+    ('SyllabusActivityClassifier — clasificación', 'Diseño', '$0.0017'),
+    ('UniteSchemaSubAgent — actividades', 'Diseño', '$0.0019'),
+    ('IpesAgent — one_step_schema_recursos (18 sem.)', 'Generación', '$0.0045'),
+    ('IpesAgent — one_step_introduccion (18 sem.)', 'Generación', '$0.0043'),
+    ('IpesAgent — one_step_presentaciones (18 sem.)', 'Generación', '$0.0053'),
+    ('IpesAgent — one_step_ejercicios (18 sem.)', 'Generación', '$0.0027'),
+    ('CheckIpesAgent — QA del contenido', 'Aseguramiento', '$0.0002'),
+    ('TOTAL IPES (sin material base)', '', '~$0.025 USD'),
 ]
 for i, row_data in enumerate(comp_data):
     row = comp_tbl.rows[i+1]
     for j, val in enumerate(row_data):
         row.cells[j].text = val
-    if row_data[0].startswith('TOTAL'):
-        for cell in row.cells:
-            if cell.paragraphs[0].runs:
-                cell.paragraphs[0].runs[0].bold = True
+        if row_data[0].startswith('TOTAL'):
+            row.cells[j].paragraphs[0].runs[0].bold = True if row.cells[j].paragraphs[0].runs else False
 
 doc.add_paragraph()
 
@@ -710,7 +708,7 @@ cmp_data = [
      '~2 a 3 semanas × tarifa por hora',
      'Costo variable según volumen; no escalable sin incremento proporcional de horas.'),
     ('Solución IA (Gemini 2.5-flash-lite)',
-     '~$0.030 USD por curso (IPES)\n~$0.078 USD por curso (flujo completo)',
+     '~$0.025 USD por curso (IPES)\n~$0.064 USD por curso (flujo completo)',
      'Costo fijo por ejecución, independiente del número de cursos procesados en paralelo.'),
 ]
 for i, row_data in enumerate(cmp_data):
@@ -721,11 +719,10 @@ for i, row_data in enumerate(cmp_data):
 body(
     'Nota: Los costos presentados se basan en datos reales obtenidos del registro de '
     'tokens del sistema (token_usage.jsonl), correspondientes a 566 llamadas de '
-    'ejecución sobre 8 cursos de prueba. El costo de ~$0.030 USD corresponde únicamente '
-    'a la generación de materiales IPES (124,375 tokens de entrada y 67,798 tokens de '
-    'salida por curso en promedio). El costo de ~$0.078 USD incluye adicionalmente la '
-    'generación del material base de referencia (genera_material_base, 76,806 tokens '
-    'entrada / 136,808 tokens salida), que es opcional en el flujo de producción.'
+    'ejecución. El costo de $0.025 USD corresponde únicamente a la generación de '
+    'materiales IPES (Introducción, Presentaciones y Ejercicios). El costo de $0.064 '
+    'USD incluye adicionalmente la generación del material base de referencia '
+    '(genera_material_base), que es opcional en el flujo de producción.'
 )
 
 doc.add_paragraph()
