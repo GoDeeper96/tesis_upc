@@ -725,6 +725,47 @@ body(
     '(genera_material_base), que es opcional en el flujo de producción.'
 )
 
+# ── Costos operativos ─────────────────────────────────────────────────────────
+doc.add_paragraph()
+body('Costos operativos del proyecto', bold=True)
+body(
+    'Además del costo de consumo de APIs de IA, el proyecto involucra un equipo de '
+    'trabajo con cinco roles activos bajo una metodología ágil (Scrum). A continuación '
+    'se presenta el costo estimado por rol en función de las horas de participación '
+    'proyectadas durante el ciclo de vida del proyecto (mayo–octubre 2026). '
+    'Las tarifas por hora se derivan de las remuneraciones de referencia del mercado '
+    'para cada perfil, calculadas sobre una base de 160 horas mensuales.'
+)
+
+op_tbl = doc.add_table(rows=7, cols=4)
+op_tbl.style = 'Table Grid'
+header_row(op_tbl, ['Rol', 'Horas estimadas', 'Tarifa/hora (S/.)', 'Costo total (S/.)'])
+op_data = [
+    ('Desarrollador IA',                              '400 hrs', 'S/. 31.25', 'S/. 12,500'),
+    ('Project Manager',                               '120 hrs', 'S/. 37.50', 'S/. 4,500'),
+    ('Tech Leader',                                   '100 hrs', 'S/. 37.50', 'S/. 3,750'),
+    ('Product Owner',                                  '80 hrs', 'S/. 28.13', 'S/. 2,250'),
+    ('Stakeholder / Sponsor\n(Jefe del equipo Modelos Emergentes)', '20 hrs', 'S/. 62.50', 'S/. 1,250'),
+    ('TOTAL',                                         '720 hrs', '',          'S/. 24,250'),
+]
+for i, row_data in enumerate(op_data):
+    row = op_tbl.rows[i+1]
+    for j, val in enumerate(row_data):
+        row.cells[j].text = val
+    if row_data[0] == 'TOTAL':
+        for cell in row.cells:
+            if cell.paragraphs[0].runs:
+                cell.paragraphs[0].runs[0].bold = True
+
+doc.add_paragraph()
+body('Hardware asignado al equipo', bold=True)
+hw2_tbl = doc.add_table(rows=2, cols=3)
+hw2_tbl.style = 'Table Grid'
+header_row(hw2_tbl, ['Recurso', 'Descripción', 'Cantidad'])
+hw2_tbl.rows[1].cells[0].text = 'HP EliteBook Pro'
+hw2_tbl.rows[1].cells[1].text = 'Laptop asignada por la institución al equipo de desarrollo del proyecto.'
+hw2_tbl.rows[1].cells[2].text = '1 unidad'
+
 doc.add_paragraph()
 page_break()
 
