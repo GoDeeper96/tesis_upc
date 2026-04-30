@@ -1,0 +1,149 @@
+<mxfile host="app.diagrams.net" modified="2026-04-30T00:00:00.000Z" version="21.0.0">
+  <diagram id="ai-agentes" name="Aplicación IA Multi-Agente">
+    <mxGraphModel dx="1300" dy="700" grid="0" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1300" pageHeight="700" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- TITLE -->
+        <mxCell id="title" value="Flujo de la Aplicación IA — Experto Temático"
+          style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=16;fontStyle=1;"
+          vertex="1" parent="1">
+          <mxGeometry x="300" y="18" width="620" height="38" as="geometry" />
+        </mxCell>
+
+        <!-- PHASE LABELS -->
+        <mxCell id="ph1" value="1. Ingesta y análisis"
+          style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=10;fontStyle=2;fontColor=#666666;"
+          vertex="1" parent="1">
+          <mxGeometry x="30" y="68" width="560" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="ph2" value="2. Generación semanal (con validación)"
+          style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=10;fontStyle=2;fontColor=#666666;"
+          vertex="1" parent="1">
+          <mxGeometry x="640" y="68" width="430" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- Separator line between phases -->
+        <mxCell id="sep" value=""
+          style="line;strokeColor=#cccccc;fillColor=none;"
+          vertex="1" parent="1">
+          <mxGeometry x="625" y="65" width="2" height="490" as="geometry" />
+        </mxCell>
+
+        <!-- NODE 1: Documentos de entrada -->
+        <mxCell id="n1" value="&lt;b&gt;Documentos de Entrada&lt;/b&gt;&lt;br&gt;Sílabo (Excel)&lt;br&gt;Acta Kickoff (PDF/Word)"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;arcSize=15;"
+          vertex="1" parent="1">
+          <mxGeometry x="30" y="160" width="180" height="90" as="geometry" />
+        </mxCell>
+
+        <!-- NODE 2: KickOff Agent -->
+        <mxCell id="n2" value="&lt;b&gt;KickOff Agent&lt;/b&gt;&lt;br&gt;Extrae acuerdos&lt;br&gt;y configuración"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=12;arcSize=15;"
+          vertex="1" parent="1">
+          <mxGeometry x="260" y="170" width="155" height="70" as="geometry" />
+        </mxCell>
+
+        <!-- NODE 3: Syllabus Agent -->
+        <mxCell id="n3" value="&lt;b&gt;Syllabus Agent&lt;/b&gt;&lt;br&gt;Clasifica semanas&lt;br&gt;y evaluaciones"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=12;arcSize=15;"
+          vertex="1" parent="1">
+          <mxGeometry x="460" y="170" width="155" height="70" as="geometry" />
+        </mxCell>
+
+        <!-- NODE 4: Schema Agent -->
+        <mxCell id="n4" value="&lt;b&gt;Schema Agent&lt;/b&gt;&lt;br&gt;Asigna recursos&lt;br&gt;por semana"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=12;arcSize=15;"
+          vertex="1" parent="1">
+          <mxGeometry x="650" y="170" width="155" height="70" as="geometry" />
+        </mxCell>
+
+        <!-- NODE 5: IPES Agent -->
+        <mxCell id="n5" value="&lt;b&gt;IPES Agent&lt;/b&gt;&lt;br&gt;Genera planificación&lt;br&gt;instruccional"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12;arcSize=15;"
+          vertex="1" parent="1">
+          <mxGeometry x="650" y="360" width="155" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- NODE 6: Check IPES Agent -->
+        <mxCell id="n6" value="&lt;b&gt;Check IPES Agent&lt;/b&gt;&lt;br&gt;Valida calidad&lt;br&gt;del IPES"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12;arcSize=15;"
+          vertex="1" parent="1">
+          <mxGeometry x="870" y="360" width="155" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- NODE 7: Output -->
+        <mxCell id="n7" value="&lt;b&gt;IPES + Material Base&lt;/b&gt;&lt;br&gt;Contenido final validado&lt;br&gt;por semana"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;arcSize=15;"
+          vertex="1" parent="1">
+          <mxGeometry x="870" y="540" width="155" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- Per-week loop annotation -->
+        <mxCell id="ann1" value="↩ itera por cada semana del sílabo"
+          style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=9;fontStyle=2;fontColor=#b85450;"
+          vertex="1" parent="1">
+          <mxGeometry x="630" y="318" width="200" height="22" as="geometry" />
+        </mxCell>
+
+        <!-- EDGES -->
+
+        <!-- Input → KickOff -->
+        <mxCell id="e1" value=""
+          style="edgeStyle=orthogonalEdgeStyle;"
+          edge="1" source="n1" target="n2" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- KickOff → Syllabus -->
+        <mxCell id="e2" value=""
+          style="edgeStyle=orthogonalEdgeStyle;"
+          edge="1" source="n2" target="n3" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Syllabus → Schema -->
+        <mxCell id="e3" value=""
+          style="edgeStyle=orthogonalEdgeStyle;"
+          edge="1" source="n3" target="n4" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Schema → IPES (vertical drop) -->
+        <mxCell id="e4" value="por semana"
+          style="edgeStyle=orthogonalEdgeStyle;fontSize=10;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;"
+          edge="1" source="n4" target="n5" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- IPES → Check (horizontal) -->
+        <mxCell id="e5" value="valida"
+          style="edgeStyle=orthogonalEdgeStyle;fontSize=10;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;"
+          edge="1" source="n5" target="n6" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Check → IPES (retry loop, dashed, below both boxes) -->
+        <mxCell id="e6" value="calidad insuficiente → retry"
+          style="edgeStyle=orthogonalEdgeStyle;fontSize=10;dashed=1;fontColor=#b85450;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;"
+          edge="1" source="n6" target="n5" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="947" y="490" />
+              <mxPoint x="727" y="490" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Check → Output (approved) -->
+        <mxCell id="e7" value="aprobado"
+          style="edgeStyle=orthogonalEdgeStyle;fontSize=10;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;"
+          edge="1" source="n6" target="n7" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

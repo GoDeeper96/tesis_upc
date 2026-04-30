@@ -12,3 +12,4 @@ _tmp_*.py
 # Editor / OS
 .DS_Store
 Thumbs.db
+*.mp4

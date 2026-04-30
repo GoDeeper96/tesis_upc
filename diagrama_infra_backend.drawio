@@ -1,0 +1,158 @@
+<mxfile host="app.diagrams.net" modified="2026-04-30T00:00:00.000Z" version="21.0.0">
+  <diagram id="infra-backend" name="Infraestructura Backend">
+    <mxGraphModel dx="900" dy="1100" grid="0" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- TITLE -->
+        <mxCell id="title" value="Arquitectura de Infraestructura Backend"
+          style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=16;fontStyle=1;"
+          vertex="1" parent="1">
+          <mxGeometry x="100" y="18" width="500" height="38" as="geometry" />
+        </mxCell>
+
+        <!-- SUBTITLE labels -->
+        <mxCell id="lbl1" value="Flujo síncrono ──────────────────────────▶"
+          style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=10;fontStyle=2;fontColor=#6c8ebf;"
+          vertex="1" parent="1">
+          <mxGeometry x="555" y="300" width="240" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="lbl2" value="Flujo asíncrono (procesamiento en background)"
+          style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=10;fontStyle=2;fontColor=#b85450;"
+          vertex="1" parent="1">
+          <mxGeometry x="130" y="415" width="310" height="22" as="geometry" />
+        </mxCell>
+
+        <!-- NODE 1: Cliente (top) -->
+        <mxCell id="n1" value="&lt;b&gt;Cliente&lt;/b&gt;"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=13;arcSize=20;"
+          vertex="1" parent="1">
+          <mxGeometry x="335" y="75" width="160" height="55" as="geometry" />
+        </mxCell>
+
+        <!-- NODE 2: Amazon API Gateway -->
+        <mxCell id="n2" value="&lt;b&gt;Amazon API Gateway&lt;/b&gt;"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;arcSize=20;"
+          vertex="1" parent="1">
+          <mxGeometry x="335" y="195" width="160" height="55" as="geometry" />
+        </mxCell>
+
+        <!-- NODE 3: AWS Lambda Handler -->
+        <mxCell id="n3" value="&lt;b&gt;AWS Lambda&lt;/b&gt;&lt;br&gt;Handler"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12;arcSize=20;"
+          vertex="1" parent="1">
+          <mxGeometry x="335" y="315" width="160" height="55" as="geometry" />
+        </mxCell>
+
+        <!-- NODE 4: Respuesta síncrona (right side) -->
+        <mxCell id="n4" value="{ job_id: 'abc123' }&lt;br&gt;&lt;i&gt;respuesta inmediata&lt;/i&gt;"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#999999;fontSize=11;arcSize=20;"
+          vertex="1" parent="1">
+          <mxGeometry x="565" y="315" width="175" height="55" as="geometry" />
+        </mxCell>
+
+        <!-- NODE 5: Amazon SQS -->
+        <mxCell id="n5" value="&lt;b&gt;Amazon SQS&lt;/b&gt;&lt;br&gt;Cola de mensajes"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;arcSize=20;"
+          vertex="1" parent="1">
+          <mxGeometry x="335" y="445" width="160" height="55" as="geometry" />
+        </mxCell>
+
+        <!-- NODE 6: Lambda Worker -->
+        <mxCell id="n6" value="&lt;b&gt;AWS Lambda&lt;/b&gt;&lt;br&gt;Worker (generación IA)"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12;arcSize=20;"
+          vertex="1" parent="1">
+          <mxGeometry x="335" y="570" width="160" height="55" as="geometry" />
+        </mxCell>
+
+        <!-- Note: 15 min max -->
+        <mxCell id="note1" value="⏱ máx. 15 min por proceso"
+          style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=9;fontColor=#888888;fontStyle=2;"
+          vertex="1" parent="1">
+          <mxGeometry x="510" y="580" width="200" height="22" as="geometry" />
+        </mxCell>
+
+        <!-- NODE 7: Amazon SNS -->
+        <mxCell id="n7" value="&lt;b&gt;Amazon SNS&lt;/b&gt;&lt;br&gt;Notificaciones"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;arcSize=20;"
+          vertex="1" parent="1">
+          <mxGeometry x="335" y="695" width="160" height="55" as="geometry" />
+        </mxCell>
+
+        <!-- NODE 8: Webhook -->
+        <mxCell id="n8" value="&lt;b&gt;Webhook&lt;/b&gt;&lt;br&gt;Callback URL registrada"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;arcSize=20;"
+          vertex="1" parent="1">
+          <mxGeometry x="335" y="820" width="160" height="55" as="geometry" />
+        </mxCell>
+
+        <!-- NODE 9: Cliente notificado (bottom right) -->
+        <mxCell id="n9" value="&lt;b&gt;Cliente&lt;/b&gt;&lt;br&gt;✓ resultado recibido"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;arcSize=20;"
+          vertex="1" parent="1">
+          <mxGeometry x="565" y="820" width="175" height="55" as="geometry" />
+        </mxCell>
+
+        <!-- EDGES -->
+
+        <!-- Cliente → API Gateway -->
+        <mxCell id="e1" value="POST /generate"
+          style="edgeStyle=orthogonalEdgeStyle;fontSize=11;"
+          edge="1" source="n1" target="n2" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- API Gateway → Lambda Handler -->
+        <mxCell id="e2" value="enruta solicitud"
+          style="edgeStyle=orthogonalEdgeStyle;fontSize=10;fontColor=#666666;"
+          edge="1" source="n2" target="n3" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Lambda Handler → job_id (sync, right) -->
+        <mxCell id="e3" value="200 OK"
+          style="edgeStyle=orthogonalEdgeStyle;fontSize=10;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;"
+          edge="1" source="n3" target="n4" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Lambda Handler → SQS (async, dashed) -->
+        <mxCell id="e4" value="encolar trabajo"
+          style="edgeStyle=orthogonalEdgeStyle;fontSize=10;dashed=1;endArrow=block;endFill=1;"
+          edge="1" source="n3" target="n5" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- SQS → Lambda Worker -->
+        <mxCell id="e5" value="dispara ejecución"
+          style="edgeStyle=orthogonalEdgeStyle;fontSize=10;"
+          edge="1" source="n5" target="n6" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Lambda Worker → SNS -->
+        <mxCell id="e6" value="publica resultado"
+          style="edgeStyle=orthogonalEdgeStyle;fontSize=10;"
+          edge="1" source="n6" target="n7" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- SNS → Webhook -->
+        <mxCell id="e7" value="HTTP POST"
+          style="edgeStyle=orthogonalEdgeStyle;fontSize=10;"
+          edge="1" source="n7" target="n8" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Webhook → Cliente notificado -->
+        <mxCell id="e8" value="notificación push"
+          style="edgeStyle=orthogonalEdgeStyle;fontSize=10;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;"
+          edge="1" source="n8" target="n9" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
