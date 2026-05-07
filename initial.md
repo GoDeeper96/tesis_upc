@@ -156,11 +156,11 @@ Si bien existen herramientas de apoyo al diseño instruccional (Articulate Story
 
 ### 6.1 Diseño Instruccional y el modelo ADDIE
 
-El Diseño Instruccional es la disciplina que sistematiza el proceso de creación de materiales y experiencias de aprendizaje efectivas. El modelo ADDIE (Análisis, Diseño, Desarrollo, Implementación, Evaluación) es el marco de referencia más extendido en la literatura (Branch, 2009; Dick, Carey & Carey, 2015). El sistema Experto Temático automatiza principalmente las fases de **Análisis** (interpretación del sílabo y acuerdos del kick-off) y **Desarrollo** (generación de materiales semana a semana), dejando la **Evaluación** en manos del experto humano revisor.
+El Diseño Instruccional es la disciplina que sistematiza el proceso de creación de materiales y experiencias de aprendizaje efectivas. El modelo ADDIE (Análisis, Diseño, Desarrollo, Implementación, Evaluación) es el marco de referencia más extendido en la literatura (Branch, 2009; Dick et al., 2015). El sistema Experto Temático automatiza principalmente las fases de **Análisis** (interpretación del sílabo y acuerdos del kick-off) y **Desarrollo** (generación de materiales semana a semana), dejando la **Evaluación** en manos del experto humano revisor.
 
 ### 6.2 Taxonomía de Bloom y verbos de aprendizaje
 
-La Taxonomía de Bloom (Bloom et al., 1956; revisada por Anderson & Krathwohl, 2001) clasifica los objetivos de aprendizaje en seis niveles cognitivos: Recordar, Comprender, Aplicar, Analizar, Evaluar y Crear. Cada nivel se asocia a verbos de acción específicos que permiten identificar el tipo de procesamiento cognitivo que el estudiante debe realizar.
+La Taxonomía de Bloom (Bloom et al., 1956; Anderson & Krathwohl, 2001) clasifica los objetivos de aprendizaje en seis niveles cognitivos: Recordar, Comprender, Aplicar, Analizar, Evaluar y Crear. Cada nivel se asocia a verbos de acción específicos que permiten identificar el tipo de procesamiento cognitivo que el estudiante debe realizar.
 
 En el sistema Experto Temático, el **verbo del logro de aprendizaje** de cada semana actúa como el primer filtro de selección de recursos pedagógicos. Un apartado cuyo logro incluye el verbo "Aplicar" debe ser cubierto preferentemente con recursos interactivos (H5P, Storyline) que permitan práctica activa, mientras que uno con verbo "Recordar" puede cubrirse con organizadores visuales o lecturas. Este mapeo verbo-recurso está formalizado como regla en el sistema y validado por el prompt de generación de esquemas con recursos.
 
@@ -179,7 +179,7 @@ Cada nodo de esta jerarquía debe ser consistente con el superior. El sistema va
 
 ### 6.4 Teoría de la Carga Cognitiva (Sweller, 1988)
 
-La Teoría de la Carga Cognitiva sostiene que la capacidad de procesamiento de la memoria de trabajo es limitada, y que el diseño instruccional debe minimizar la carga extrínseca (irrelevante al aprendizaje) para maximizar la carga germinal (que contribuye al aprendizaje). En términos prácticos, esto se traduce en restricciones sobre la cantidad y duración de los recursos por semana.
+La Teoría de la Carga Cognitiva sostiene que la capacidad de procesamiento de la memoria de trabajo es limitada, y que el diseño instruccional debe minimizar la carga extrínseca (irrelevante al aprendizaje) para maximizar la carga germinal (que contribuye al aprendizaje) (Paas et al., 2003). En términos prácticos, esto se traduce en restricciones sobre la cantidad y duración de los recursos por semana.
 
 El sistema formaliza esto mediante:
 - **Presupuesto de tiempo fijo:** cada sesión tiene una duración máxima derivada de los créditos del curso.
@@ -192,7 +192,7 @@ Los Grandes Modelos de Lenguaje son redes neuronales de transformadores entrenad
 
 - Tutores conversacionales (Khanmigo de Khan Academy, GitHub Copilot para programación).
 - Retroalimentación automática sobre ensayos y trabajos escritos.
-- Generación de preguntas de evaluación y rúbricas.
+- Generación de preguntas de evaluación y rúbricas (Zawacki-Richter et al., 2019; Kasneci et al., 2023).
 
 La generación automatizada de materiales instruccionales completos con restricciones pedagógicas formales representa una aplicación menos estudiada y de mayor complejidad, dado que requiere coherencia a escala de un curso entero (múltiples semanas) y adherencia a reglas no triviales.
 
@@ -208,7 +208,7 @@ Este paradigma es superior al prompt-chaining simple para el caso de uso de gene
 
 ### 6.7 Validación Híbrida: LLM + Código Determinístico
 
-Un hallazgo central de la literatura reciente sobre sistemas de IA confiables es que las validaciones críticas no deben delegarse exclusivamente al LLM (Anthropic, 2024; OpenAI, 2024). Los LLMs pueden "alucinar" o ignorar restricciones incluso cuando estas están explícitamente en el prompt.
+Un hallazgo central de la literatura reciente sobre sistemas de IA confiables es que las validaciones críticas no deben delegarse exclusivamente al LLM. Los LLMs pueden "alucinar" o ignorar restricciones incluso cuando estas están explícitamente en el prompt.
 
 El sistema Experto Temático adopta un enfoque híbrido:
 - **LLM:** para validaciones semánticas (alineación de logros, coherencia narrativa, pertinencia del recurso).
@@ -569,37 +569,39 @@ Sistema para modificar cursos existentes de forma dirigida:
 
 ---
 
-## 14. Referencias Bibliográficas Preliminares
+## 14. Referencias
 
-> *Nota: Esta sección deberá ampliarse y formalizarse durante el desarrollo de la tesis conforme al formato de citación definido por la universidad.*
+**Anderson, L. W., & Krathwohl, D. R. (Eds.). (2001).** *A taxonomy for learning, teaching, and assessing: A revision of Bloom's taxonomy of educational objectives*. Longman.
 
-**Diseño Instruccional:**
-- Branch, R. M. (2009). *Instructional Design: The ADDIE Approach*. Springer.
-- Dick, W., Carey, L., & Carey, J. O. (2015). *The Systematic Design of Instruction* (8th ed.). Pearson.
-- Biggs, J. (1996). Enhancing teaching through constructive alignment. *Higher Education, 32*(3), 347–364.
+**Baidoo-Anu, D., & Owusu Ansah, L. (2023).** Education in the era of generative artificial intelligence (AI): Understanding the potential benefits of ChatGPT in promoting teaching and learning. *Journal of AI, 7*(1), 52–62.
 
-**Taxonomía de Bloom:**
-- Bloom, B. S., et al. (1956). *Taxonomy of Educational Objectives: The Classification of Educational Goals*. David McKay.
-- Anderson, L. W., & Krathwohl, D. R. (2001). *A Taxonomy for Learning, Teaching, and Assessing: A Revision of Bloom's Taxonomy*. Longman.
+**Biggs, J. (1996).** Enhancing teaching through constructive alignment. *Higher Education, 32*(3), 347–364. https://doi.org/10.1007/BF00138871
 
-**Carga Cognitiva:**
-- Sweller, J. (1988). Cognitive load during problem solving: Effects on learning. *Cognitive Science, 12*(2), 257–285.
-- Paas, F., Renkl, A., & Sweller, J. (2003). Cognitive load theory and instructional design: Recent developments. *Educational Psychologist, 38*(1), 1–4.
+**Bloom, B. S., Engelhart, M. D., Furst, E. J., Hill, W. H., & Krathwohl, D. R. (1956).** *Taxonomy of educational objectives: The classification of educational goals*. David McKay.
 
-**Grandes Modelos de Lenguaje:**
-- Brown, T., et al. (2020). Language models are few-shot learners. *Advances in Neural Information Processing Systems, 33*, 1877–1901.
-- Wei, J., et al. (2022). Emergent abilities of large language models. *Transactions on Machine Learning Research*.
-- Ouyang, L., et al. (2022). Training language models to follow instructions with human feedback. *Advances in Neural Information Processing Systems*.
+**Branch, R. M. (2009).** *Instructional design: The ADDIE approach*. Springer. https://doi.org/10.1007/978-0-387-09506-6
 
-**IA en Educación:**
-- Zawacki-Richter, O., et al. (2019). Systematic review of research on artificial intelligence applications in higher education – where are the educators? *International Journal of Educational Technology in Higher Education, 16*(1), 39.
-- Kasneci, E., et al. (2023). ChatGPT for good? On opportunities and challenges of large language models for education. *Learning and Individual Differences, 103*, 102274.
-- Baidoo-Anu, D., & Owusu Ansah, L. (2023). Education in the era of generative artificial intelligence (AI): Understanding the potential benefits of ChatGPT in promoting teaching and learning. *Journal of AI, 7*(1), 52–62.
+**Brown, T. B., Mann, B., Ryder, N., Subbiah, M., Kaplan, J., Dhariwal, P., Neelakantan, A., Shyam, P., Sastry, G., Askell, A., Agarwal, S., Herbert-Voss, A., Krueger, G., Henighan, T., Child, R., Ramesh, A., Ziegler, D. M., Wu, J., Winter, C., . . . Amodei, D. (2020).** Language models are few-shot learners. *Advances in Neural Information Processing Systems, 33*, 1877–1901. https://doi.org/10.48550/arXiv.2005.14165
 
-**Sistemas Multi-Agente y LangGraph:**
-- Chase, H. (2024). *LangGraph: Building stateful, multi-actor applications with LLMs*. LangChain, Inc.
-- Yao, S., et al. (2023). ReAct: Synergizing reasoning and acting in language models. *International Conference on Learning Representations (ICLR)*.
-- Park, J. S., et al. (2023). Generative agents: Interactive simulacra of human behavior. *ACM Symposium on User Interface Software and Technology (UIST)*.
+**Chase, H. (2024).** *LangGraph: Building stateful, multi-actor applications with LLMs* [Software]. LangChain, Inc. https://langchain-ai.github.io/langgraph/
+
+**Dick, W., Carey, L., & Carey, J. O. (2015).** *The systematic design of instruction* (8th ed.). Pearson.
+
+**Kasneci, E., Seßler, K., Küchemann, S., Bannert, M., Dementieva, D., Fischer, F., Gasser, U., Groh, G., Günnemann, S., Hüllermeier, E., Krusche, S., Kutyniok, G., Michaeli, T., Nerdel, C., Pfeffer, J., Poquet, O., Sailer, M., Schmidt, A., Seidel, T., . . . Kasneci, G. (2023).** ChatGPT for good? On opportunities and challenges of large language models for education. *Learning and Individual Differences, 103*, Article 102274. https://doi.org/10.1016/j.lindif.2023.102274
+
+**Ouyang, L., Wu, J., Jiang, X., Almeida, D., Wainwright, C. L., Mishkin, P., Zhang, C., Agarwal, S., Slama, K., Ray, A., Schulman, J., Hilton, J., Kelton, F., Miller, L. E., Simens, M., Askell, A., Welinder, P., Christiano, P. F., Leike, J., & Lowe, R. (2022).** Training language models to follow instructions with human feedback. *Advances in Neural Information Processing Systems, 35*, 27730–27744. https://doi.org/10.48550/arXiv.2203.02155
+
+**Paas, F., Renkl, A., & Sweller, J. (2003).** Cognitive load theory and instructional design: Recent developments. *Educational Psychologist, 38*(1), 1–4. https://doi.org/10.1207/S15326985EP3801_1
+
+**Park, J. S., O'Brien, J. C., Cai, C. J., Morris, M. R., Liang, P., & Bernstein, M. S. (2023).** Generative agents: Interactive simulacra of human behavior [Ponencia]. 36th Annual ACM Symposium on User Interface Software and Technology. https://doi.org/10.1145/3586183.3606763
+
+**Sweller, J. (1988).** Cognitive load during problem solving: Effects on learning. *Cognitive Science, 12*(2), 257–285. https://doi.org/10.1207/s15516709cog1202_4
+
+**Wei, J., Tay, Y., Bommasani, R., Raffel, C., Zoph, B., Borgeaud, S., Yogatama, D., Bosma, M., Zhou, D., Metzler, D., Chi, E. H., Hashimoto, T., Vinyals, O., Liang, P., Dean, J., & Fedus, W. (2022).** Emergent abilities of large language models. *Transactions on Machine Learning Research*. https://openreview.net/forum?id=yzkSU5zdwD
+
+**Yao, S., Zhao, J., Yu, D., Du, N., Shafran, I., Narasimhan, K., & Cao, Y. (2023).** ReAct: Synergizing reasoning and acting in language models [Ponencia]. International Conference on Learning Representations. https://doi.org/10.48550/arXiv.2210.03629
+
+**Zawacki-Richter, O., Marín, V. I., Bond, M., & Gouverneur, F. (2019).** Systematic review of research on artificial intelligence applications in higher education – where are the educators? *International Journal of Educational Technology in Higher Education, 16*(1), Article 39. https://doi.org/10.1186/s41239-019-0171-0
 
 ---
 

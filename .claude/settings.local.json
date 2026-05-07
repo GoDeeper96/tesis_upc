@@ -12,7 +12,9 @@
       "Bash(git add *)",
       "Bash(git commit -m ' *)",
       "Bash(del *)",
-      "WebFetch(domain:biblioteca.upc.edu.pe)"
+      "WebFetch(domain:biblioteca.upc.edu.pe)",
+      "Bash(git checkout *)",
+      "Bash(rm Tesis_ours.docx Tesis_theirs.docx)"
     ]
   }
 }

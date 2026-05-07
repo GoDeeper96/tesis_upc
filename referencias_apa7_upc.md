@@ -122,7 +122,7 @@ Tipo de decreto XXXX. (Año). Título en cursiva. Institución. URL
 
 **Bloom, B. S., Engelhart, M. D., Furst, E. J., Hill, W. H., & Krathwohl, D. R. (1956).** *Taxonomy of educational objectives: The classification of educational goals*. David McKay.
 
-**Brown, T. B., Mann, B., Ryder, N., Subbiah, M., Kaplan, J., Dhariwal, P., & Amodei, D. (2020).** Language models are few-shot learners. *Advances in Neural Information Processing Systems, 33*, 1877–1901. https://doi.org/10.48550/arXiv.2005.14165
+**Brown, T. B., Mann, B., Ryder, N., Subbiah, M., Kaplan, J., Dhariwal, P., Neelakantan, A., Shyam, P., Sastry, G., Askell, A., Agarwal, S., Herbert-Voss, A., Krueger, G., Henighan, T., Child, R., Ramesh, A., Ziegler, D. M., Wu, J., Winter, C., . . . Amodei, D. (2020).** Language models are few-shot learners. *Advances in Neural Information Processing Systems, 33*, 1877–1901. https://doi.org/10.48550/arXiv.2005.14165
 
 **Chase, H. (2024).** *LangGraph: Building stateful, multi-actor applications with LLMs*. LangChain, Inc. Recuperado el 5 de mayo de 2026, de https://langchain-ai.github.io/langgraph/
 
@@ -162,7 +162,7 @@ Tipo de decreto XXXX. (Año). Título en cursiva. Institución. URL
 |---|---|
 | Anderson (2001) | Agregado `(Eds.)` |
 | Bloom (1956) | Sentence case en título |
-| Brown et al. (2020) | Agregado DOI `10.48550/arXiv.2005.14165` |
+| Brown et al. (2020) | Agregado DOI `10.48550/arXiv.2005.14165`; corregida lista de autores (APA 7: primeros 19 + último) |
 | Chase (2024) | Agregado "Recuperado el..." |
 | **Decreto Supremo 003-2013-JUS** | Formato UPC: autor = tipo+número, institución = Presidencia de la República |
 | **Ley 29733** | Formato UPC: `Ley 29733. (2011). Título. Congreso de la República del Perú.` |
