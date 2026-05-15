@@ -14,7 +14,11 @@
       "Bash(del *)",
       "WebFetch(domain:biblioteca.upc.edu.pe)",
       "Bash(git checkout *)",
-      "Bash(rm Tesis_ours.docx Tesis_theirs.docx)"
+      "Bash(rm Tesis_ours.docx Tesis_theirs.docx)",
+      "Bash(git fetch *)",
+      "WebSearch",
+      "WebFetch(domain:arxiv.org)",
+      "WebFetch(domain:dl.acm.org)"
     ]
   }
 }
