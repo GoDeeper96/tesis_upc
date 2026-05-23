@@ -18,7 +18,14 @@
       "Bash(git fetch *)",
       "WebSearch",
       "WebFetch(domain:arxiv.org)",
-      "WebFetch(domain:dl.acm.org)"
+      "WebFetch(domain:dl.acm.org)",
+      "Bash(Get-ChildItem -Path \"D:\\\\Proyectos actuales\\\\proyecto_tesis_upc\" -File)",
+      "Bash(Select-Object Name, Length)",
+      "Bash(Sort-Object Name)",
+      "PowerShell(Test-Path *)",
+      "WebFetch(domain:scrumguides.org)",
+      "WebFetch(domain:langchain-ai.github.io)",
+      "WebFetch(domain:platform.openai.com)"
     ]
   }
 }
