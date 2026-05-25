@@ -25,7 +25,12 @@
       "PowerShell(Test-Path *)",
       "WebFetch(domain:scrumguides.org)",
       "WebFetch(domain:langchain-ai.github.io)",
-      "WebFetch(domain:platform.openai.com)"
+      "WebFetch(domain:platform.openai.com)",
+      "Bash(git push *)",
+      "Bash(git pull *)",
+      "Bash(Get-ChildItem \"D:\\\\Proyectos actuales\\\\proyecto_tesis_upc\\\\validacion\\\\\" | Format-List Name, Length *)",
+      "Bash(python3 -c ' *)",
+      "Bash(Remove-Item insert_validacion.py, insert_refs.py)"
     ]
   }
 }
