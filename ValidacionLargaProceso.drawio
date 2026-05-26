@@ -1,0 +1,43 @@
+<mxfile host="Electron">
+  <diagram name="Página-1" id="iYsnbkYcN88Lc9wowce2">
+    <mxGraphModel dx="1140" dy="580" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="qWRQK9pNVKNvhAoHHJWC-4" edge="1" parent="1" source="qWRQK9pNVKNvhAoHHJWC-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="qWRQK9pNVKNvhAoHHJWC-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qWRQK9pNVKNvhAoHHJWC-13" edge="1" parent="1" source="qWRQK9pNVKNvhAoHHJWC-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="qWRQK9pNVKNvhAoHHJWC-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qWRQK9pNVKNvhAoHHJWC-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#CCE5FF;" value="Evaluación ciega&amp;nbsp;" vertex="1">
+          <mxGeometry height="60" width="120" x="102.5" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="qWRQK9pNVKNvhAoHHJWC-6" edge="1" parent="1" source="qWRQK9pNVKNvhAoHHJWC-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="qWRQK9pNVKNvhAoHHJWC-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qWRQK9pNVKNvhAoHHJWC-3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#A9C4EB;" value="Entrevista de diagnostico" vertex="1">
+          <mxGeometry height="60" width="120" x="350" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="qWRQK9pNVKNvhAoHHJWC-17" edge="1" parent="1" source="qWRQK9pNVKNvhAoHHJWC-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="qWRQK9pNVKNvhAoHHJWC-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qWRQK9pNVKNvhAoHHJWC-5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#7EA6E0;" value="Revelación del ciego" vertex="1">
+          <mxGeometry height="60" width="120" x="627.5" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="qWRQK9pNVKNvhAoHHJWC-11" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FF9999;" value="- Explicación de la dinamica y rúbrica&lt;div&gt;- Docente revisa el recurso&lt;/div&gt;&lt;div&gt;- Ambos califican con la rúbrica&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="235" x="45" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="qWRQK9pNVKNvhAoHHJWC-14" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FF9999;" value="- Preguntas sobre la rúbrica y criterios al docente.&lt;div&gt;- Qué materiales están listos para producción?&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="235" x="300" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="qWRQK9pNVKNvhAoHHJWC-15" edge="1" parent="1" source="qWRQK9pNVKNvhAoHHJWC-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.472;entryY=-0.009;entryDx=0;entryDy=0;entryPerimeter=0;" target="qWRQK9pNVKNvhAoHHJWC-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qWRQK9pNVKNvhAoHHJWC-16" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FF9999;" value="- Se revela el ciego&lt;div&gt;- Preguntas sobre los materiales de IA y Humano&lt;/div&gt;&lt;div&gt;- Qué materiales fueron mejores o peores?&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="235" x="570" y="360" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

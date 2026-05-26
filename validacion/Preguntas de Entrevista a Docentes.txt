@@ -1,0 +1,28 @@
+# Guía de preguntas de diagnóstico
+
+## Reflexión sobre la rúbrica
+
+1. [Revisar las rúbricas criterio a criterio.]
+    1. En criterio X, calificaste algunas piezas más alto que otras. ¿Qué diferencia las buenas de las malas?
+2. [Ubicar los outliers más altos y más bajos]
+    1. La pieza X recibió altos puntajes, ¿qué la destacó?
+    2. La pieza Y recibió bajos puntajes, ¿qué falló?
+3. ¿Qué tipos de errores detectaste? Da ejemplos.
+4. ¿Tu crees que un revisor no-experto podría detectar esos errores o requieren un experto en el tema?
+5. ¿Los problemas que encontraste en el material son corregibles? ¿Cómo?
+6. ¿Los errores que encontraste son similares, diferentes? ¿Indican el mismo tipo de problema?
+
+## Calidad para producción
+
+1. ¿Qué piezas generadas están listas para convertir en recurso final (video, infografía, etc) ya?
+2. ¿Qué piezas generadas estarían listas para convertir en un recurso final con algo de edición?
+3. ¿Qué piezas generadas no están listas para convertir en un recurso final? ¿Las enviarías a rehacer de 0?
+
+## [Revelar el ciego]
+
+## Factor sorpresa
+
+1. ¿En retrospectiva, hay alguna pieza que te sorprendió?
+2. Viendo todas las piezas juntas, ¿qué patrones ves que no observaste en la revisión individual?
+3. ¿Hay algo en que la IA sobresalga, comparado con el material humano? ¿Hay algo que haga peor?
+4. ¿Qué cambiarías en tu valoración si volvieras a evaluarlas?
